@@ -1,8 +1,11 @@
+interface SearchResponsePageInfo {
+  totalResults: number,
+  resultsPerPage: number,
+}
+
+
 export interface SearchResponse {
-  pageInfo: {
-    totalResults: number;
-    resultsPerPage: number;
-  };
+  pageInfo: SearchResponsePageInfo,
   items: [
     {
       id: string;
