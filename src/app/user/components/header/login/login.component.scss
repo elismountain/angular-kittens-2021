@@ -16,18 +16,29 @@ form {
   width: 100%;
 }
 
+.login-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
 
 .login-image {
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   flex-direction: row;
   position: relative;
 }
 
 .login-icon {
-  height: 19px;
-  width: 19px;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
 }
 
 .login-title{
@@ -39,6 +50,7 @@ form {
   letter-spacing: 0em;
   text-align: right;
   color: #4F4F4F;
-  ;
+  height: 15px;
+  width: 102px;
 }
 

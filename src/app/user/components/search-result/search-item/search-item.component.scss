@@ -1,0 +1,83 @@
+.example-card {
+    height: 327px;
+    width: 263px;
+}
+
+.example-header-image {
+  background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+  background-size: cover;
+}
+
+.card-image {
+    height: 123px;
+    width: 223px;
+    display: block;
+    background-color: #C4C4C4;
+}
+
+.mat-card-image{
+    margin: 20px 20px 20px 20px !important;
+}
+
+.mat-button {
+    line-height: 0px;
+    min-width: 50px;
+}
+
+.view-count {
+    background-image: url(/assets/viewed.svg);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 13px;
+    justify-content: center;
+    padding-right: 2px;
+}
+
+.icon-count{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+
+    margin: 0 20px 0 20px;
+
+}
+
+.like-count {
+    background-image: url(/assets/liked.svg);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 13px;
+    justify-content: center;
+}
+
+.dislike-count {
+    background-image: url(/assets/dislike.svg);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 13px;
+    justify-content: center;
+}
+
+.comment-count {
+    background-image: url(/assets/comment.svg);
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 13px;
+    justify-content: center;
+}
+
+.card-name {
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 23px;
+    letter-spacing: 0em;
+    // text-align: center;
+    color: #4F4F4F;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 23px;
+    padding-top: 21px;
+}

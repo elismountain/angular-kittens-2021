@@ -11,6 +11,7 @@ export class SearchItemComponent {
   @Input() item: SearchItem = {
     id: '',
     title: '',
+    podcastNamber: 0,
     type: '',
     description: '',
     imgUrl: '',

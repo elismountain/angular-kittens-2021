@@ -1,1 +1,19 @@
-<p>search-item works!</p>
+<mat-card class="example-card">
+    <img class="card-image" mat-card-image [src]="item.imgUrl" alt="photo of a band">
+    <mat-card-content>
+      <p>
+        {{item.description}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions class="icon-count">
+      <button class="view-count" mat-button>{{item.viewCount}}</button>
+      <button class="like-count" mat-button>{{item.likeCount}}</button>
+      <button class="dislike-count" mat-button>{{item.dislikeCount}}</button>
+      <button class="comment-count" mat-button>{{item.commentCount}}</button>
+    </mat-card-actions>
+    <mat-card-content>
+        <p class="card-name">
+            Kuji Podcast #{{item.podcastNamber}}
+        </p>
+      </mat-card-content>
+  </mat-card>
