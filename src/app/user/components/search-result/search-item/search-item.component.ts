@@ -1,5 +1,5 @@
 import { Component, Input, Output, EventEmitter} from '@angular/core';
-import { SearchItem } from '../search-item.model';
+import { UserCategory } from '../../../models/user-category';
 
 @Component({
   selector: 'app-search-item',
@@ -8,19 +8,19 @@ import { SearchItem } from '../search-item.model';
 })
 export class SearchItemComponent {
 
-  @Input() item: SearchItem = {
-    id: '',
-    title: '',
-    podcastNamber: 0,
-    type: '',
-    description: '',
-    imgUrl: '',
-    viewCount: 0,
-    likeCount: 0,
-    dislikeCount: 0,
-    commentCount: 0,
+  @Input() item: UserCategory = {
+    id: '11',
+    title: 'example category name',
+    type: 'string',
+    podcastNumber: '12',
+    description: 'short description',
+    imgUrl: 'https://material.angular.io/assets/img/examples/shiba2.jpg',
+    viewCount: '1',
+    likeCount: '1',
+    dislikeCount: '1',
+    commentCount: '1',
   };
 
-  @Output() openItem = new EventEmitter<SearchItem['id']>();
+  @Output() openItem = new EventEmitter<UserCategory['id']>();
 
 }

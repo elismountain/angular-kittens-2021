@@ -1,4 +1,10 @@
 .search-result-block {
-    padding: 100px 100px 0 100px;
+    padding: 100px 152px 100px 152px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 1600;
+    gap: 28px ;
+    max-width: 100%;
 
 }

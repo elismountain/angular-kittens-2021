@@ -1,10 +1,10 @@
 <mat-card class="example-card">
     <img class="card-image" mat-card-image [src]="item.imgUrl" alt="photo of a band">
-    <mat-card-content>
+    <!-- <mat-card-content>
       <p>
         {{item.description}}
       </p>
-    </mat-card-content>
+    </mat-card-content> -->
     <mat-card-actions class="icon-count">
       <button class="view-count" mat-button>{{item.viewCount}}</button>
       <button class="like-count" mat-button>{{item.likeCount}}</button>
@@ -13,7 +13,10 @@
     </mat-card-actions>
     <mat-card-content>
         <p class="card-name">
-            Kuji Podcast #{{item.podcastNamber}}
+            Kuji Podcast #{{item.podcastNumber}}
         </p>
       </mat-card-content>
+      <div class="button-card__wrapper">
+        <button class="button-card" mat-raised-button>More...</button>
+      </div>
   </mat-card>

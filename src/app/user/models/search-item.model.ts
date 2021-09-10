@@ -2,11 +2,11 @@ export interface SearchItem {
   id: string;
   type: string;
   title: string;
-  podcastNamber: number;
+  podcastNumber: string;
   description: string;
   imgUrl: string;
-  viewCount: number;
-  likeCount: number;
-  dislikeCount: number;
-  commentCount: number;
+  viewCount: string;
+  likeCount: string;
+  dislikeCount: string;
+  commentCount: string;
 }
