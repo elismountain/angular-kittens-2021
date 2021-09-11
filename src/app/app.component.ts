@@ -1,10 +1,19 @@
 import { Component } from '@angular/core';
+import { adminCategories, userCategories } from './app.constants';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss'],
+  styleUrls: ['./app.component.scss']
 })
+
 export class AppComponent {
-  title = 'youtube-client';
+  title = 'components';
+  userCategories = userCategories;
+  adminCategories = adminCategories;
+
+
+  ngOnInit(): void {
+    this.title = 'components';
+  }
 }

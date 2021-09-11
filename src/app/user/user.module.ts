@@ -6,6 +6,7 @@ import { SearchResultComponent } from './components/search-result/search-result.
 import { SearchItemComponent } from './components/search-result/search-item/search-item.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LoginModalComponent } from './components/login-modal/login-modal.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -14,10 +15,11 @@ import { LoginModalComponent } from './components/login-modal/login-modal.compon
     SearchItemComponent,
     HeaderComponent,
     SearchItemComponent,
-    LoginModalComponent,
+    LoginModalComponent
+    
   ],
   imports: [
-    CommonModule, MaterialModule
+    CommonModule, MaterialModule, SharedModule
   ], 
   exports: [ MaterialModule,  HeaderComponent, FilterComponent, SearchResultComponent, LoginModalComponent]
 })

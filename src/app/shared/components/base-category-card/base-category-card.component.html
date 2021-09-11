@@ -1,0 +1,14 @@
+<mat-card class="example-card" *ngIf="category" class="example-card" (click)="openCategory.emit(category.id)">
+  <img class="card-image" mat-card-image [src]="category.imgUrl" [alt]="category.imageAlt">
+  <mat-card-actions class="icon-count">
+    <ng-content></ng-content>
+  </mat-card-actions>
+  <mat-card-content>
+    <p class="card-name">
+      Kuji Podcast #{{category.podcastNumber}}
+    </p>
+  </mat-card-content>
+  <div class="button-card__wrapper">
+    <button class="button-card" mat-raised-button>More...</button>
+  </div>
+</mat-card>

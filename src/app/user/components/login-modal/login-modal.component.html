@@ -5,15 +5,16 @@
       <div class="form-label">Login</div>
 
       <mat-form-field class="input" appearance="fill">
-        <input matInput placeholder="">
-        <mat-error *ngIf="!userForm.controls['email'].valid && userForm.controls['email'].dirty">
-          Email is not correct.</mat-error>
+        <input matInput formControlName="email" type="email" class="email" placeholder="">
+        <mat-error class="input-error" *ngIf="!userForm.controls['email'].valid && userForm.controls['email'].dirty">
+          Email is not valid.</mat-error>
       </mat-form-field>
 
       <div class="form-label"> Password </div>
       <mat-form-field class="input" appearance="fill">
-
-        <input matInput placeholder="">
+        <input matInput formControlName="password" type="password" placeholder="">
+        <mat-error class="input-error" *ngIf="!userForm.controls['password'].valid && userForm.controls['password'].dirty">
+          Password is not valid.</mat-error>
       </mat-form-field>
     </form>
     <div class="controls">
@@ -22,36 +23,43 @@
     </div>
   </mat-tab>
 
-  <!-- registration -->
+  registration
 
   <mat-tab class="container-reg">
     <div class="title">Registration</div>
-    <form class="form-reg" [formGroup]="userForm">
+    <form class="form-reg" [formGroup]="userForm" >
 
       <div class="form-label">First Name</div>
       <mat-form-field class="input" appearance="fill">
-        <input matInput placeholder="">
+        <input matInput formControlName="first" type="text"  placeholder="">
+        <mat-error class="input-error" *ngIf="!userForm.controls['first'].valid && userForm.controls['first'].dirty">
+          Name is too short.</mat-error>
       </mat-form-field>
 
       <div class="form-label">Last Name</div>
       <mat-form-field class="input" appearance="fill">
-
-        <input matInput placeholder="">
+        <input matInput  formControlName="last" type="text" placeholder="">
+        <mat-error class="input-error" *ngIf="!userForm.controls['last'].valid && userForm.controls['last'].dirty">
+          Last Name is too short.</mat-error>
       </mat-form-field>
-      <div class="form-label">Registration</div>
+
+      <div class="form-label">Email</div>
       <mat-form-field class="input" appearance="fill">
-        <input matInput placeholder="">
+        <input matInput formControlName="email" type="email" class="email"  placeholder="">
+        <mat-error class="input-error" *ngIf="!userForm.controls['email'].valid && userForm.controls['email'].dirty">
+          Email is not valid.</mat-error>
       </mat-form-field>
 
       <div class="form-label">Password</div>
-      <mat-form-field class="input" appearance="fill">
-
+      <mat-form-field class="input" formControlName="password" type="password" placeholder="" appearance="fill">
+        <mat-error class="input-error" *ngIf="!userForm.controls['password'].valid && userForm.controls['password'].dirty">
+          Password should be more than 6 symbols.</mat-error>
         <input matInput placeholder="">
       </mat-form-field>
     </form>
     <div class="controls">
       <a class="control-btn registration-link">Login</a>
-      <button mat-raised-button class="control-btn reg-btn">Registration</button>
+      <button mat-raised-button class="control-btn reg-btn" type="submit">Registration</button>
     </div>
   </mat-tab>
 </mat-tab-group>

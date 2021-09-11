@@ -1,0 +1,19 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px ;
+}
+
+.categories-list {
+    display: flex;
+    flex-direction: column;
+}
+
+.category-form {
+    margin: 20px;
+    input{
+        margin: 5px;
+    }
+}

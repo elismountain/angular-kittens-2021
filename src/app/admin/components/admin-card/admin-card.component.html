@@ -1,0 +1,22 @@
+<app-base-category-card *ngIf="category" [category]="category" (click)="openCategory.emit(category.id)">
+
+  <button mat-icon-button area-label="Edit" color="primary" (click)="editCategory.emit(category.id)" matTooltip="Edit">
+    <mat-icon> Edit </mat-icon>
+  </button>
+
+  <button mat-icon-button area-label="Activate" color="primary" (click)="activateCategory.emit(category.id)"
+    matTooltip="Activate">
+    <mat-icon> Activate </mat-icon>
+  </button>
+
+  <button mat-icon-button area-label="Deactivate" color="primary" (click)="deactivateCategory.emit(category.id)"
+    matTooltip="De Activate">
+    <mat-icon> <span class="material-icons">vissibility_off</span></mat-icon>
+  </button>
+
+  <button mat-icon-button area-label="Delite" color="primary" (click)="deliteCategory.emit(category.id)"
+    matTooltip="Delite">
+    <mat-icon>Delite</mat-icon>
+  </button>
+  
+</app-base-category-card>

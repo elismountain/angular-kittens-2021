@@ -1,0 +1,17 @@
+<div class="category-form" *ngIf="editMode">
+    <input name="name" placeholder="Name" [(ngModel)]="editedCategoryName">
+</div>
+
+<div class="categories-list">
+
+<app-admin-card
+*ngFor="let category of categories"
+[category]="category"
+(openCategory)="onOpenCategory($event)"
+(editCategory)="onEditCategory($event)"
+(activateCategory)="onActivateCategory($event)"
+(deactivateCategory)="onDeactivateCategory($event)"
+(deliteCategory)="onDeliteCategory($event)"
+>
+</app-admin-card>
+</div>

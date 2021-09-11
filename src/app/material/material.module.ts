@@ -10,6 +10,7 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSliderModule } from '@angular/material/slider';
 import { MatDialogModule} from '@angular/material/dialog';
 import { ReactiveFormsModule } from '@angular/forms';
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 
 
 
@@ -26,7 +27,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatToolbarModule,
     MatSliderModule,
     MatDialogModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatProgressSpinnerModule,
+
   ],
 
   exports: [
@@ -39,7 +42,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatToolbarModule,
     MatSliderModule,
     MatDialogModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatProgressSpinnerModule,
   ]
 })
 
