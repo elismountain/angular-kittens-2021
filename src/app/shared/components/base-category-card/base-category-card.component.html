@@ -1,4 +1,4 @@
-<mat-card class="example-card" *ngIf="category" class="example-card" (click)="openCategory.emit(category.id)">
+<mat-card class="example-card" *ngIf="category" class="example-card" (click)="onOpenCard()">
   <img class="card-image" mat-card-image [src]="category.imgUrl" [alt]="category.imageAlt">
   <mat-card-actions class="icon-count">
     <ng-content></ng-content>

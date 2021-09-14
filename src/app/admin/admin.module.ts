@@ -13,7 +13,7 @@ import { AdminCategoriesComponent } from './components/admin-categories/admin-ca
     SharedModule, FormsModule
   ],
   exports: [
-    AdminCategoriesComponent, FormsModule
+    AdminCategoriesComponent
   ]
 })
 export class AdminModule { }

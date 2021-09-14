@@ -1,7 +1,6 @@
 import { Component, Input, OnInit, ViewContainerRef } from '@angular/core';
 import {FormControl, FormGroup, Validators, FormBuilder} from '@angular/forms';
 import { MatDialog} from '@angular/material/dialog';
-import { AuthenticationService } from 'src/app/services/authentication.service';
 
 
 @Component({
@@ -23,7 +22,6 @@ export class LoginModalComponent implements OnInit {
   @Input() selfRef!: ViewContainerRef;
 
   constructor(
-    public authService: AuthenticationService,
     private formBuilder: FormBuilder,
     public dialogRef: MatDialog
   ) {}

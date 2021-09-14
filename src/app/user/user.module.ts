@@ -21,7 +21,7 @@ import { SharedModule } from '../shared/shared.module';
   imports: [
     CommonModule, MaterialModule, SharedModule
   ], 
-  exports: [ MaterialModule,  HeaderComponent, FilterComponent, SearchResultComponent, LoginModalComponent]
+  exports: [ HeaderComponent, FilterComponent, SearchResultComponent, LoginModalComponent]
 })
 
 export class UserModule { }

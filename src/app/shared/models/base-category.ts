@@ -5,6 +5,7 @@ export interface BaseCategory {
     podcastNumber: string;
     description: string;
     imgUrl: string;
+    urlVideo: string;
     imageAlt: string;
     viewCount: string;
     likeCount: string;
