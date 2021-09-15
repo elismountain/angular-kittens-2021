@@ -2,7 +2,6 @@ import { Component, Input, OnInit, ViewContainerRef } from '@angular/core';
 import {FormControl, FormGroup, Validators, FormBuilder} from '@angular/forms';
 import { MatDialog} from '@angular/material/dialog';
 
-
 @Component({
   selector: 'app-login-modal',
   templateUrl: './login-modal.component.html',
@@ -35,8 +34,8 @@ export class LoginModalComponent implements OnInit {
 
   createForm() {
     this.userForm = this.formBuilder.group({
-      'first':  ['', Validators.required ],
-      'last':  ['', Validators.required ],
+      'first':  ['', Validators.minLength(2) ],
+      'last':  ['', Validators.minLength(2) ],
       'email': ['', Validators.email],
       'password': ['', Validators.minLength(6)],
     })
@@ -46,7 +45,6 @@ export class LoginModalComponent implements OnInit {
     this.createForm()
   }
 
-
   openRegistration() {
     this.selfRef.clear();
   }
@@ -54,4 +52,8 @@ export class LoginModalComponent implements OnInit {
   openLogin() {
     this.selfRef.clear();
   }
+
+  validateElement(key: string) {
+    !this.userForm.controls[key].valid && this.userForm.controls[key].dirty
+    }
 }

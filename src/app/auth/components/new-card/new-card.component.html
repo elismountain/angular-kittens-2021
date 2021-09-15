@@ -1,0 +1,52 @@
+<mat-tab-group>
+  <mat-tab class="container-card">
+    <div class="title">Create new card </div>
+    <form class="form-card" [formGroup]="cardForm">
+
+      <div class="form-label">Title</div>
+      <mat-form-field class="input" appearance="fill">
+        <input matInput formControlName="title" type="text" placeholder="" class="title">
+        <mat-error class="input-error" (click)="validateElement('title')">
+          Title is too short.</mat-error>
+      </mat-form-field>
+
+      <div class="form-label">Discription</div>
+      <mat-form-field class="input" appearance="fill">
+        <input matInput formControlName="discription" type="text" placeholder="">
+        <mat-error class="input-error" (click)="validateElement('discription')">
+          Discription is too short.</mat-error>
+      </mat-form-field>
+
+      <!-- пока пропущу - сделаю нормальную загрузку файла чуть позже -->
+
+
+      <!-- <input type="file" class="file-input" (change)="onFileSelected($event)" #fileUpload>
+      <div class="file-upload">
+        {{fileName || "No file uploaded yet."}}
+        <button mat-mini-fab color="primary" class="upload-btn" (click)="fileUpload.click()">
+          <mat-icon>attach_file</mat-icon>
+        </button>
+      </div> -->
+
+      <!-- <div class="form-label">Img</div>
+      <label class="btn-upload" for="btnInput">
+        <input class="upload" id="btnInput" name="upload" type="file" placeholder="Load mat-card-image"/>
+      </label> -->
+
+      <!-- <div class="form-label">Img</div>
+      <mat-form-field class="input" appearance="fill">
+        <input matInput class="upload" id="btnInput" name="upload" type="text" placeholder="Load mat-card-image" />
+      </mat-form-field> -->
+
+      <div class="form-label"> Link video </div>
+      <mat-form-field class="input" appearance="fill">
+        <input matInput formControlName="link" type="text" placeholder="">
+        <mat-error class="input-error" (click)="validateElement('link')">
+          Video link is required.</mat-error>
+      </mat-form-field>
+    </form>
+    <div class="controls">
+      <button mat-raised-button class="control-btn reg-btn" type="submit">Create card</button>
+    </div>
+  </mat-tab>
+</mat-tab-group>

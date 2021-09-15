@@ -1,7 +1,6 @@
-import { AdminCategory } from "./admin/models/admin-category";
-import { UserCategory } from "./user/models/user-category";
+import { VideoCategory } from "./youtube/models/video-category";
 
- const UserCategory : UserCategory = {
+ const VideoCategory : VideoCategory = {
     id: '111',
     type: '',
     title: '',
@@ -17,16 +16,8 @@ import { UserCategory } from "./user/models/user-category";
 }
 
 
-export const userCategories: UserCategory[] = Array.from(Array(10).keys()).map(
+export const videoCategories: VideoCategory[] = Array.from(Array(10).keys()).map(
     (key: number) => ({
-        ...UserCategory,
+        ...VideoCategory,
         id: key.toString(),
     }));
-
-
-export const adminCategories: AdminCategory[] = userCategories.map((category) => {
-    return {
-        ...category,
-        isActive: true,
-    };
-});

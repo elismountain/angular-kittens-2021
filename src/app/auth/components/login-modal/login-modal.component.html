@@ -5,16 +5,16 @@
       <div class="form-label">Login</div>
 
       <mat-form-field class="input" appearance="fill">
-        <input matInput formControlName="email" type="email" class="email" placeholder="">
-        <mat-error class="input-error" *ngIf="!userForm.controls['email'].valid && userForm.controls['email'].dirty">
+        <input matInput formControlName="email" type="email" class="email" placeholder="" >
+          <mat-error class="input-error" (click)="validateElement('email')">
           Email is not valid.</mat-error>
       </mat-form-field>
 
       <div class="form-label"> Password </div>
       <mat-form-field class="input" appearance="fill">
         <input matInput formControlName="password" type="password" placeholder="">
-        <mat-error class="input-error" *ngIf="!userForm.controls['password'].valid && userForm.controls['password'].dirty">
-          Password is not valid.</mat-error>
+        <mat-error class="input-error" (click)="validateElement('password')">
+          Password should be 6 symbols.</mat-error>
       </mat-form-field>
     </form>
     <div class="controls">
@@ -23,7 +23,8 @@
     </div>
   </mat-tab>
 
-  registration
+<!-- 
+  registration -->
 
   <mat-tab class="container-reg">
     <div class="title">Registration</div>
@@ -32,29 +33,29 @@
       <div class="form-label">First Name</div>
       <mat-form-field class="input" appearance="fill">
         <input matInput formControlName="first" type="text"  placeholder="">
-        <mat-error class="input-error" *ngIf="!userForm.controls['first'].valid && userForm.controls['first'].dirty">
+        <mat-error class="input-error" (click)="validateElement('first')">
           Name is too short.</mat-error>
       </mat-form-field>
 
       <div class="form-label">Last Name</div>
       <mat-form-field class="input" appearance="fill">
         <input matInput  formControlName="last" type="text" placeholder="">
-        <mat-error class="input-error" *ngIf="!userForm.controls['last'].valid && userForm.controls['last'].dirty">
+        <mat-error class="input-error" (click)="validateElement('last')">
           Last Name is too short.</mat-error>
       </mat-form-field>
 
       <div class="form-label">Email</div>
       <mat-form-field class="input" appearance="fill">
         <input matInput formControlName="email" type="email" class="email"  placeholder="">
-        <mat-error class="input-error" *ngIf="!userForm.controls['email'].valid && userForm.controls['email'].dirty">
+        <mat-error class="input-error" (click)="validateElement('email')">
           Email is not valid.</mat-error>
       </mat-form-field>
 
-      <div class="form-label">Password</div>
-      <mat-form-field class="input" formControlName="password" type="password" placeholder="" appearance="fill">
-        <mat-error class="input-error" *ngIf="!userForm.controls['password'].valid && userForm.controls['password'].dirty">
-          Password should be more than 6 symbols.</mat-error>
-        <input matInput placeholder="">
+      <div class="form-label"> Password </div>
+      <mat-form-field class="input" appearance="fill">
+        <input matInput formControlName="password" type="password" placeholder="">
+        <mat-error class="input-error" (click)="validateElement('password')">
+          Password should be 6 symbols.</mat-error>
       </mat-form-field>
     </form>
     <div class="controls">

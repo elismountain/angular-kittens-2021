@@ -6,7 +6,6 @@ import {BaseCategory} from '../../models/base-category';
   selector: 'app-base-category-card',
   templateUrl: './base-category-card.component.html',
   styleUrls: ['./base-category-card.component.scss'],
-  
 
 })
 

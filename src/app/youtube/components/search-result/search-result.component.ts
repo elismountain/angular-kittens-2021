@@ -1,5 +1,5 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
-import { UserCategory } from '../../models/user-category';
+import { VideoCategory } from '../../models/video-category';
 
 
 @Component({
@@ -11,14 +11,14 @@ import { UserCategory } from '../../models/user-category';
 
 export class SearchResultComponent implements OnInit {
 
-  @Input() categories: UserCategory[] = [];
+  @Input() categories: VideoCategory[] = [];
 
   constructor() { }
 
  ngOnInit(): void {
   } 
 
-  onOpenCategory(id: UserCategory['id']) {
+  onOpenCategory(id: VideoCategory['id']) {
     console.log(id);
   }
 }

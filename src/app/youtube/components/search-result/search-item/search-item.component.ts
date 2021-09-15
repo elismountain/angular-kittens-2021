@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
 import { BaseCategoryCardDirective } from 'src/app/shared/directives/base-category-card.directive';
-import { UserCategory } from '../../../models/user-category';
+import { VideoCategory } from '../../../models/video-category';
 
 @Component({
   selector: 'app-search-item',
@@ -10,7 +10,7 @@ import { UserCategory } from '../../../models/user-category';
 })
 
 
-export class SearchItemComponent extends BaseCategoryCardDirective<UserCategory>
+export class SearchItemComponent extends BaseCategoryCardDirective<VideoCategory>
   implements OnInit
 
 {
