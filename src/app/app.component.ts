@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { videoCategories } from './app.constants';
 
 @Component({
   selector: 'app-root',
@@ -9,7 +8,6 @@ import { videoCategories } from './app.constants';
 
 export class AppComponent {
   title = 'components';
-  videoCategories = videoCategories;
 
 
   ngOnInit(): void {

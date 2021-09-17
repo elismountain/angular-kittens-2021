@@ -1,11 +1,21 @@
-<app-base-category-card 
-*ngIf="category" 
-[category]="category" 
-(click)="openCategory.emit(category.id)">
+<mat-card class="example-card" class="example-card">
+  <mat-card-title>{{ item.snippet.title }}</mat-card-title>
+  <img class="card-image" mat-card-image [src]="item.snippet.thumbnails.default.url">
+  <mat-card-actions class="icon-count">
+    <button class="view-count" mat-button>{{ item.statistics.viewCount}}</button>
+    <button class="like-count" mat-button> {{ item.statistics.likeCount}} </button>
+    <button class="dislike-count" mat-button> {{ item.statistics.dislikeCount}} </button>
+    <button class="comment-count" mat-button> {{ item.statistics.commentCount}} </button>
+  </mat-card-actions>
+  <mat-card-content>
+    <p class="card-name">
+      Kuji Podcast #
+    </p>
+  </mat-card-content>
+  <div class="button-card__wrapper">
+    <button class="button-card" mat-raised-button>More...</button>
+  </div>
+</mat-card> 
 
-  <button class="view-count" mat-button>{{category.viewCount}}</button>
-  <button class="like-count" mat-button>{{category.likeCount}}</button>
-  <button class="dislike-count" mat-button>{{category.dislikeCount}}</button>
-  <button class="comment-count" mat-button>{{category.commentCount}}</button>
+
   
-</app-base-category-card>

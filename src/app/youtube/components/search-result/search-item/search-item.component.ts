@@ -1,19 +1,24 @@
-import { ChangeDetectionStrategy, Component, OnInit} from '@angular/core';
-import { BaseCategoryCardDirective } from 'src/app/shared/directives/base-category-card.directive';
-import { VideoCategory } from '../../../models/video-category';
+import { Component, OnInit, Input} from '@angular/core';
+import { ISearchItem } from 'src/app/youtube/models/search-item.model';
+
 
 @Component({
   selector: 'app-search-item',
   templateUrl: './search-item.component.html',
   styleUrls: ['./search-item.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
 })
 
 
-export class SearchItemComponent extends BaseCategoryCardDirective<VideoCategory>
-  implements OnInit
+export class SearchItemComponent implements OnInit {
 
-{
-  ngOnInit(): void {}
+
+  @Input() public item: ISearchItem;
+
+  constructor() {
+    
+   }
+  public ngOnInit(): void {
+    
+  }
 }
 
