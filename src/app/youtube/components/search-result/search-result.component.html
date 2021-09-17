@@ -1,0 +1,7 @@
+<div class="search-result-block">
+  <!-- <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <p *ngIf="itemsArray.length === 0 && isLoading !== true">Type something to see the results!</p> -->
+
+  <app-search-item *ngFor="let item of itemsArray" [item]="item">
+  </app-search-item>
+</div>

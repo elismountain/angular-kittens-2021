@@ -1,0 +1,36 @@
+<mat-toolbar class="header" color="#E5E5E5;">
+  <div class="logo">
+    <img src="assets/logo.png" routerLink="home">
+  </div>
+
+  <form class="form-inline" id="search-form" name="search-form" onSubmit="return search()">
+    <table>
+      <tr class="table-search">
+        <td>
+          <div class="d3 float-right" style="width:100%;">
+            <input class="form-control search-field" type="search" id="query" style="width:100%;"
+              placeholder="What are you want to find out?">
+          </div>
+        </td>
+        <td>
+          <button class="search-button" type="submit" id="search-btn" name="search-btn" value="">search</button>
+        </td>
+      </tr>
+    </table>
+  </form>
+
+  <a class="search-settings-button">
+    <img src="assets/search-settings.png" routerLink="home" alt="button">
+  </a>
+
+
+  <div class="login-wrapper">
+    <div class="login-image">
+      <span class="login-title">Your Name</span>
+      <a>
+        <img class="login-icon" src="assets/login.png">
+      </a>
+    </div>
+
+  </div>
+</mat-toolbar>

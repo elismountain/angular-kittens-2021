@@ -1,0 +1,66 @@
+<mat-tab-group>
+  <mat-tab class="container-login">
+    <div class="title">Login</div>
+    <form class="form" [formGroup]="userForm">
+      <div class="form-label">Login</div>
+
+      <mat-form-field class="input" appearance="fill">
+        <input matInput formControlName="email" type="email" class="email" placeholder="" >
+          <mat-error class="input-error" (click)="validateElement('email')">
+          Email is not valid.</mat-error>
+      </mat-form-field>
+
+      <div class="form-label"> Password </div>
+      <mat-form-field class="input" appearance="fill">
+        <input matInput formControlName="password" type="password" placeholder="">
+        <mat-error class="input-error" (click)="validateElement('password')">
+          Password should be 6 symbols.</mat-error>
+      </mat-form-field>
+    </form>
+    <div class="controls">
+      <a class="control-btn registration-link" (click)="openRegistration()">Registration</a>
+      <button mat-raised-button class="control-btn login-btn" (click)="openLogin()">Login</button>
+    </div>
+  </mat-tab>
+
+<!-- 
+  registration -->
+
+  <mat-tab class="container-reg">
+    <div class="title">Registration</div>
+    <form class="form-reg" [formGroup]="userForm" >
+
+      <div class="form-label">First Name</div>
+      <mat-form-field class="input" appearance="fill">
+        <input matInput formControlName="first" type="text"  placeholder="">
+        <mat-error class="input-error" (click)="validateElement('first')">
+          Name is too short.</mat-error>
+      </mat-form-field>
+
+      <div class="form-label">Last Name</div>
+      <mat-form-field class="input" appearance="fill">
+        <input matInput  formControlName="last" type="text" placeholder="">
+        <mat-error class="input-error" (click)="validateElement('last')">
+          Last Name is too short.</mat-error>
+      </mat-form-field>
+
+      <div class="form-label">Email</div>
+      <mat-form-field class="input" appearance="fill">
+        <input matInput formControlName="email" type="email" class="email"  placeholder="">
+        <mat-error class="input-error" (click)="validateElement('email')">
+          Email is not valid.</mat-error>
+      </mat-form-field>
+
+      <div class="form-label"> Password </div>
+      <mat-form-field class="input" appearance="fill">
+        <input matInput formControlName="password" type="password" placeholder="">
+        <mat-error class="input-error" (click)="validateElement('password')">
+          Password should be 6 symbols.</mat-error>
+      </mat-form-field>
+    </form>
+    <div class="controls">
+      <a class="control-btn registration-link">Login</a>
+      <button mat-raised-button class="control-btn reg-btn" type="submit">Registration</button>
+    </div>
+  </mat-tab>
+</mat-tab-group>
